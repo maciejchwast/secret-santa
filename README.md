@@ -16,7 +16,7 @@ A full-stack Secret Santa web application with a FastAPI backend and a React + V
 ### Prerequisites
 
 - Docker and Docker Compose installed locally.
-- Copy `backend/.env.example` to `backend/.env` and update secrets, SMTP credentials, and database URLs as needed.
+- Copy `backend/.env.example` to `backend/.env` and update secrets, Mailgun credentials, and database URLs as needed.
 
 ```bash
 cp backend/.env.example backend/.env
@@ -67,7 +67,7 @@ A standalone script is not provided, but you can import `make_assignments` from 
 
 ## Deployment Notes
 
-- Configure SMTP credentials for real email delivery and set up SPF/DKIM/DMARC on your domain.
+- Configure Mailgun domain/API credentials for real email delivery and set up SPF/DKIM/DMARC on your domain.
 - Update `join_url` generation in `backend/app/routes/groups.py` to use your production domain.
 - Configure Caddy or NGINX TLS certificates for HTTPS in production.
 - Schedule database backups and monitor Celery worker health.
