@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Secret Santa Assignment</title>
+  </head>
+  <body>
+    <h1>Ho Ho Ho!</h1>
+    <p>You have been assigned to gift <strong>{{ receiver_name }}</strong>.</p>
+    {% if budget %}
+    <p>The suggested budget is {{ budget }}.</p>
+    {% endif %}
+    {% if interests %}
+    <p><strong>Interests:</strong> {{ interests | join(', ') }}</p>
+    {% endif %}
+    {% if nogos %}
+    <p><strong>Please avoid:</strong> {{ nogos | join(', ') }}</p>
+    {% endif %}
+    <p>Happy gifting!<br />The {{ group_name }} Secret Santa team</p>
+  </body>
+</html>
